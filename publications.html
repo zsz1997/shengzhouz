@@ -50,15 +50,15 @@
   [Abstract]
   </span>
   </b>
-  The new subtypes of diffuse gliomas are recognized by the World Health Organization (WHO) on the basis of genotypes, e.g., isocitrate dehydrogenase and chromosome arms 1p/19q, in addition to the histologic phenotype. Glioma subtype identification can provide valid guidances for both risk-benefit assessment and clinical decision. The feature representations of gliomas in magnetic resonance imaging (MRI) have been prevalent for revealing underlying subtype status. However, since gliomas are highly heterogeneous tumors with quite variable imaging phenotypes, learning discriminative feature representations in MRI for gliomas remains challenging. In this paper, we propose a deep cross-view co-regularized representation learning framework for glioma subtype identification, in which view representation learning and multiple constraints are integrated into a unified paradigm. Specifically, we first learn latent view-specific representations based on cross-view images generated from MRI via a bi-directional mapping connecting original imaging space and latent space, and view-correlated regularizer and output-consistent regularizer in the latent space are employed to explore view correlation and derive view consistency, respectively. We further learn view-sharable representations which can explore complementary information of multiple views by projecting the view-specific representations into a holistically shared space and enhancing via adversary learning strategy. Finally, the view-specific and view-sharable representations are incorporated for identifying glioma subtype. Experimental results on multi-site datasets demonstrate the proposed method outperforms several state-of-the-art methods in detection of glioma subtype status.
+  The new subtypes of diffuse gliomas are recognized by the World Health Organization (WHO) on the basis of genotypes, e.g., isocitrate dehydrogenase and chromosome arms 1p/19q, in addition to the histologic phenotype. Glioma subtype identification can provide valid guidances for both risk-benefit assessment and clinical decision. The feature representations of gliomas in magnetic resonance imaging (MRI) have been prevalent for revealing underlying subtype status. However, since gliomas are highly heterogeneous tumors with quite variable imaging phenotypes, learning discriminative feature representations in MRI for gliomas remains challenging. In this paper, we propose a deep cross-view co-regularized representation learning framework for glioma subtype identification, in which view representation learning and multiple constraints are integrated into a unified paradigm. Specifically, we first learn latent view-specific representations based on cross-view images generated from MRI via a bi-directional mapping connecting original imaging space and latent space, and view-correlated regularizer and output-consistent regularizer in the latent space are employed to explore view correlation and derive view consistency, respectively. We further learn view-sharable representations which can explore complementary information of multiple views by projecting the view-specific representations into a holistically shared space and enhancing via adversary learning strategy. Finally, the view-specific and view-sharable representations are incorporated for identifying glioma subtype. Experimental results on multi-site datasets demonstrate the proposed method outperforms several state-of-the-art methods in detection of glioma subtype status.
   </p>
 </p>
 </ul>
  
  <ul>
 <p style="width:1400px" class="auto_align">
-  <span>2</span>. Zhenyuan Ning, Shengzhou Zhong, Qianjin Feng, Wufan Chen, and <b>Yu Zhang</b>.
-  SMU-Net: Saliency-guided Morphology-aware U-Net for Breast Lesion Segmentation in Ultrasound Image. 
+  <span>2</span>. Zhenyuan Ning, Zehui Lin, Qing Xiao, Denghui Du, Qianjin Feng, Wufan Chen, and <b>Yu Zhang</b>.
+  Multi-Constraint Latent Representation Learning for Prognosis Analysis Using Multi-Modal Data. 
   <i style="color:#3333CC">IEEE Transactions on Neural Network Learning Systems (TNNLS).</i>
   <a href="https://ieeexplore.ieee.org/abstract/document/9556512">[PDF]</a>
 </p>
@@ -98,11 +98,10 @@
 
 <ul>
 <p style="width:1400px" class="auto_align">
-  <span>4</span>. Zhenyuan Ning, Shengzhou Zhong, Qianjin Feng, Wufan Chen, and <b>Yu Zhang</b>.
-  SMU-Net: Saliency-guided Morphology-aware U-Net for Breast Lesion Segmentation in Ultrasound Image. 
+  <span>4</span>. Zhenyuan Ning, Denghui Du, Chao Tu, Qianjin Feng, and <b>Yu Zhang</b>.
+  Relation-aware Shared Representation Learning for Cancer Prognosis Analysis with Auxiliary Clinical Variables and Incomplete Multi-modality Data. 
   <i style="color:#3333CC">IEEE Transactions on Medical Imaging (TMI).</i>
-  <a href="https://ieeexplore.ieee.org/abstract/document/9551285">[PDF]</a>
-  <a href="https://github.com/YuZhang-SMU/Breast-Lesion-Segmentation">[Code]</a>
+  <a href="https://ieeexplore.ieee.org/abstract/document/9524910">[PDF]</a>
 </p>
 <p style="width:1400px" class="auto_align">
   <img src="pic/Fig2.png" align="left" width="500" hspace="5" vspace="5">
@@ -112,18 +111,17 @@
   [Abstract]
   </span>
   </b>
-  Deep learning methods, especially convolutional neural networks, have been successfully applied to lesion segmentation in breast ultrasound (BUS) images. However, pattern complexity and intensity similarity between the surrounding tissues (i.e., background) and lesion regions (i.e., foreground) bring challenges for lesion segmentation. Considering that such rich texture information is contained in background, very few methods have tried to explore and exploit background-salient representations for assisting foreground segmentation. Additionally, other characteristics of BUS images, i.e., 1) low-contrast appearance and blurry boundary, and 2) significant shape and position variation of lesions, also increase the difficulty in accurate lesion segmentation. In this paper, we present a saliency-guided morphology-aware U-Net (SMU-Net) for lesion segmentation in BUS images. The SMU-Net is composed of a main network with an additional middle stream and an auxiliary network. Specifically, we first propose generation of saliency maps which incorporate both low-level and high-level image structures, for foreground and background. These saliency maps are then employed to guide the main network and auxiliary network for respectively learning foreground-salient and background-salient representations. Furthermore, we devise an additional middle stream which basically consists of background-assisted fusion, shape-aware, edge-aware and position-aware units. This stream receives the coarse-to-fine representations from the main network and auxiliary network for efficiently fusing the foreground-salient and background-salient features and enhancing the ability of learning morphological information for network. Extensive experiments on five datasets demonstrate higher performance and superior robustness to the scale of dataset than several state-of-the-art deep learning approaches in breast lesion segmentation in ultrasound image.
+  The integrative analysis of complementary phenotype information contained in multi-modality data (e.g., histopathological images and genomic data) has advanced the prognostic evaluation of cancers. However, multi-modality based prognosis analysis confronts two challenges: (1) how to explore underlying relations inherent in different modalities data for learning compact and discriminative multi-modality representations; (2) how to take full consideration of incomplete multi-modality data for constructing accurate and robust prognostic model, since a host of complete multi-modality data are not always available. Additionally, many existing multi-modality based prognostic methods commonly ignore relevant clinical variables (e.g., grade and stage), which, however, may provide supplemental information to promote the performance of model. In this paper, we propose a relation-aware shared representation learning method for prognosis analysis of cancers, which makes full use of clinical information and incomplete multi-modality data. The proposed method learns multi-modal shared space tailored for prognostic model via a dual mapping. Within the shared space, it equips with relational regularizers to explore the potential relations (i.e., feature-label and feature-feature relations) among multi-modality data for inducing discriminatory representations and simultaneously obtaining extra sparsity for alleviating overfitting. Moreover, it regresses and incorporates multiple auxiliary clinical attributes with dynamic coefficients to meliorate performance. Furthermore, in training stage, a partial mapping strategy is employed to extend and train a more reliable model with incomplete multi-modality data. We have evaluated our method on three public datasets derived from The Cancer Genome Atlas (TCGA) project, and the experimental results demonstrate the superior performance of the proposed method.
   </p>
 </p>
 </ul>
  
 <ul>
 <p style="width:1400px" class="auto_align">
-  <span>5</span>. Zhenyuan Ning, Shengzhou Zhong, Qianjin Feng, Wufan Chen, and <b>Yu Zhang</b>.
-  SMU-Net: Saliency-guided Morphology-aware U-Net for Breast Lesion Segmentation in Ultrasound Image. 
+  <span>5</span>. Zhenyuan Ning, Qing Xiao, Qianjin Feng, Wufan Chen, and <b>Yu Zhang</b>.
+  Relation-Induced Multi-Modal Shared Representation Learning for Alzheimer’s Disease Diagnosis. 
   <i style="color:#3333CC">IEEE Transactions on Medical Imaging (TMI).</i>
-  <a href="https://ieeexplore.ieee.org/abstract/document/9551285">[PDF]</a>
-  <a href="https://github.com/YuZhang-SMU/Breast-Lesion-Segmentation">[Code]</a>
+  <a href="https://ieeexplore.ieee.org/abstract/document/9366692">[PDF]</a>
 </p>
 <p style="width:1400px" class="auto_align">
   <img src="pic/Fig2.png" align="left" width="500" hspace="5" vspace="5">
@@ -133,18 +131,17 @@
   [Abstract]
   </span>
   </b>
-  Deep learning methods, especially convolutional neural networks, have been successfully applied to lesion segmentation in breast ultrasound (BUS) images. However, pattern complexity and intensity similarity between the surrounding tissues (i.e., background) and lesion regions (i.e., foreground) bring challenges for lesion segmentation. Considering that such rich texture information is contained in background, very few methods have tried to explore and exploit background-salient representations for assisting foreground segmentation. Additionally, other characteristics of BUS images, i.e., 1) low-contrast appearance and blurry boundary, and 2) significant shape and position variation of lesions, also increase the difficulty in accurate lesion segmentation. In this paper, we present a saliency-guided morphology-aware U-Net (SMU-Net) for lesion segmentation in BUS images. The SMU-Net is composed of a main network with an additional middle stream and an auxiliary network. Specifically, we first propose generation of saliency maps which incorporate both low-level and high-level image structures, for foreground and background. These saliency maps are then employed to guide the main network and auxiliary network for respectively learning foreground-salient and background-salient representations. Furthermore, we devise an additional middle stream which basically consists of background-assisted fusion, shape-aware, edge-aware and position-aware units. This stream receives the coarse-to-fine representations from the main network and auxiliary network for efficiently fusing the foreground-salient and background-salient features and enhancing the ability of learning morphological information for network. Extensive experiments on five datasets demonstrate higher performance and superior robustness to the scale of dataset than several state-of-the-art deep learning approaches in breast lesion segmentation in ultrasound image.
+  The fusion of multi-modal data (e.g., magnetic resonance imaging (MRI) and positron emission tomography (PET)) has been prevalent for accurate identification of Alzheimer's disease (AD) by providing complementary structural and functional information. However, most of the existing methods simply concatenate multi-modal features in the original space and ignore their underlying associations which may provide more discriminative characteristics for AD identification. Meanwhile, how to overcome the overfitting issue caused by high-dimensional multi-modal data remains appealing. To this end, we propose a relation-induced multi-modal shared representation learning method for AD diagnosis. The proposed method integrates representation learning, dimension reduction, and classifier modeling into a unified framework. Specifically, the framework first obtains multi-modal shared representations by learning a bi-directional mapping between original space and shared space. Within this shared space, we utilize several relational regularizers (including feature-feature, feature-label, and sample-sample regularizers) and auxiliary regularizers to encourage learning underlying associations inherent in multi-modal data and alleviate overfitting, respectively. Next, we project the shared representations into the target space for AD diagnosis. To validate the effectiveness of our proposed approach, we conduct extensive experiments on two independent datasets (i.e., ADNI-1 and ADNI-2), and the experimental results demonstrate that our proposed method outperforms several state-of-the-art methods.
   </p>
 </p>
 </ul>
 
 <ul>
 <p style="width:1400px" class="auto_align">
-  <span>6</span>. Zhenyuan Ning, Shengzhou Zhong, Qianjin Feng, Wufan Chen, and <b>Yu Zhang</b>.
-  SMU-Net: Saliency-guided Morphology-aware U-Net for Breast Lesion Segmentation in Ultrasound Image. 
-  <i style="color:#3333CC">IEEE Transactions on Medical Imaging (TMI).</i>
-  <a href="https://ieeexplore.ieee.org/abstract/document/9551285">[PDF]</a>
-  <a href="https://github.com/YuZhang-SMU/Breast-Lesion-Segmentation">[Code]</a>
+  <span>6</span>. Zhenyuan Ning, Jiaxiu Luo, Qing Xiao, Longmei Cai, Yuting Chen, Xiaohui Yu, Jian Wang, and <b>Yu Zhang</b>.
+  Multi-modal magnetic resonance imaging-based grading analysis for gliomas by integrating radiomics and deep features. 
+  <i style="color:#3333CC">Annals of Translational Medicine.</i>
+  <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7944310/">[PDF]</a>
 </p>
 <p style="width:1400px" class="auto_align">
   <img src="pic/Fig2.png" align="left" width="500" hspace="5" vspace="5">
@@ -154,7 +151,21 @@
   [Abstract]
   </span>
   </b>
-  Deep learning methods, especially convolutional neural networks, have been successfully applied to lesion segmentation in breast ultrasound (BUS) images. However, pattern complexity and intensity similarity between the surrounding tissues (i.e., background) and lesion regions (i.e., foreground) bring challenges for lesion segmentation. Considering that such rich texture information is contained in background, very few methods have tried to explore and exploit background-salient representations for assisting foreground segmentation. Additionally, other characteristics of BUS images, i.e., 1) low-contrast appearance and blurry boundary, and 2) significant shape and position variation of lesions, also increase the difficulty in accurate lesion segmentation. In this paper, we present a saliency-guided morphology-aware U-Net (SMU-Net) for lesion segmentation in BUS images. The SMU-Net is composed of a main network with an additional middle stream and an auxiliary network. Specifically, we first propose generation of saliency maps which incorporate both low-level and high-level image structures, for foreground and background. These saliency maps are then employed to guide the main network and auxiliary network for respectively learning foreground-salient and background-salient representations. Furthermore, we devise an additional middle stream which basically consists of background-assisted fusion, shape-aware, edge-aware and position-aware units. This stream receives the coarse-to-fine representations from the main network and auxiliary network for efficiently fusing the foreground-salient and background-salient features and enhancing the ability of learning morphological information for network. Extensive experiments on five datasets demonstrate higher performance and superior robustness to the scale of dataset than several state-of-the-art deep learning approaches in breast lesion segmentation in ultrasound image.
+  <p>Background</p>
+  <p style="width:1400px" class="auto_align">
+    To investigate the feasibility of integrating global radiomics and local deep features based on multi-modal magnetic resonance imaging (MRI) for developing a noninvasive glioma grading model.
+  </p>
+  <p>Methods</p>
+  <p style="width:1400px" class="auto_align">
+    In this study, 567 patients [211 patients with glioblastomas (GBMs) and 356 patients with low-grade gliomas (LGGs)] between May 2006 and September 2018, were enrolled and divided into training (n=186), validation (n=47), and testing cohorts (n=334), respectively. All patients underwent postcontrast enhanced T1-weighted and T2 fluid-attenuated inversion recovery MRI scanning. Radiomics and deep features (trained by 8,510 3D patches) were extracted to quantify the global and local information of gliomas, respectively. A kernel fusion-based support vector machine (SVM) classifier was used to integrate these multi-modal features for grading gliomas. The performance of the grading model was assessed using the area under receiver operating curve (AUC), sensitivity, specificity, Delong test, and t-test.
+  </p>
+  <p>Results</p>
+  <p style="width:1400px" class="auto_align">
+    The AUC, sensitivity, and specificity of the model based on combination of radiomics and deep features were 0.94 [95% confidence interval (CI): 0.85, 0.99], 86% (95% CI: 64%, 97%), and 92% (95% CI: 75%, 99%), respectively, for the validation cohort; and 0.88 (95% CI: 0.84, 0.91), 88% (95% CI: 80%, 93%), and 81% (95% CI: 76%, 86%), respectively, for the independent testing cohort from a local hospital. The developed model outperformed the models based only on either radiomics or deep features (Delong test, both of P<0.001), and was also comparable to the clinical radiologists.
+  </p>
+  <p>Conclusions</p>
+  <p style="width:1400px" class="auto_align">
+    This study demonstrated the feasibility of integrating multi-modal MRI radiomics and deep features to develop a promising noninvasive grading model for gliomas.</p>
   </p>
 </p>
 </ul>
