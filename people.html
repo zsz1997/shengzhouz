@@ -10,41 +10,45 @@
   .pic{width:800px; margin:50px auto;overflow:hidden;}
   .pic div{width:120px;float:left;margin-left:30px;}
   .pic div img{display:block;width:100%;}
-
-* {
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        .box {
-            width: 120px;
-            margin: 50px auto;
-        }
-        
-        .box-bg {
-            width: 100%;
-            height: 160px;
-        }
-        
-        .box-bg img {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .box-text {
-            width: 100%;
-        }
-        
-        .box-text h4 {
-            text-align: center;
-            padding: 5px 0;
-        }
-        
-        .box-text p {
-            font-size: 12px;
-            text-align: center;
-            padding-bottom: 10px;
-        }
+  
+  /* 包裹图片div的盒子 */
+.ul-box{
+    /*white-space: nowrap;*/
+    width: 3650px;
+}
+/* 包裹图片下标题格子 */
+.li-box span{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+/* 包裹图片是固定的宽度 */
+.li-box{
+    width: 720px;
+    margin-left: 5px;
+}
+/* 最外层: x-axis 滚动条出现以及 y-axis 滚动条隐藏 */
+.jz-box{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+/* 包裹图片的最外层div与下标题div同样宽度 */
+.jz-box,.title-box{
+    width: 720px;
+}
+/* 滚动图片的下标题以及图片的下标题 */
+.title-box,.li-box span{
+    text-align: center;
+}
+/* 顶格最大宽度: 最外层和滚动图片的下标题以及图片的下标题; */
+.li-box span{
+    width: 100%;
+}
+/* 浮动: li和里面的img以及图片的标题 */
+.li-box,.li-box img,.li-box span{
+    /*border: 1px solid red;*/
+    float: left;
+}
 </style>
 </head>
 <body>
@@ -79,18 +83,18 @@
  </div>
 <h2>Undergraduate</h2>
 
-<body>
-    <div class="box">
-        <div class="box-bg">
-            <img src="pic/denghuidu.jpg" alt="" />
-            <img src="pic/denghuidu.jpg" alt="" />
-        </div>
-        <div class="box-text">
-            <h4>Mr.Denghui Du</h4>
-            <h4>Mr.Denghui Du</h4>
-        </div>
+<div class="jz-box">
+  <div class="ul-box">
+    <div class="li-box">
+      <img src="pic/denghuidu.jpg" style="width: 120px;heught:160px;">
+      <span>Mr.Denghui Du</span>
     </div>
-</body>
+    <div class="li-box">
+      <img src="pic/denghuidu.jpg" style="width: 120px;heught:160px;">
+      <span>Mr.Denghui Du</span>
+    </div>
+  </div>
+</div>
 
 </td>
 </tr>
